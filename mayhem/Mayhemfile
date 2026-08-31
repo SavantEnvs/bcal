@@ -1,0 +1,9 @@
+project: savantenvs/bcal
+target: bcal
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bcal/testsuite
+cmds:
+  - cmd: /mayhem/bcal
+    libfuzzer: true
+    timeout: 30
